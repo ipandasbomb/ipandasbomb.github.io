@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        风起&#39;s blog
+        拉丁猪文字游戏｜风起&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://ipandasbomb.github.io/archives/2018/06/">
+    <link rel="canonical" href="http://ipandasbomb.github.io/2018/10/14/拉丁猪文字游戏/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -43,7 +43,7 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
 " data-ishome = "false" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -115,160 +115,128 @@
 </script>
 
 <!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="source\img\post-default.jpg">
+
+
 <style>
-    .intro-header .site-heading {
-        margin: 50px;
-    }
     
     header.intro-header {
         background-image: url('source\img\post-default.jpg')
     }
+
     
 </style>
 
-<!-- Page Header -->
 <header class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading text-center">
-                    <h1>archives</h1>
-                    <span class="subheading">可以根据归档日期检索所有文件</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>拉丁猪文字游戏</h1>
+                    
+                    <span class="meta">
+                         作者 风起
+                        <span>
+                          日期 2018-10-14
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="post-title-haojen">
+        <span>
+            拉丁猪文字游戏
+        </span>
+    </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- archive list -->
-            
-				
-				
-				
-					
-					
-					<div class="archive archive-year" data-date="2018">
-						<h2 class="archive-title">
-						<span class="fa fa-archive">
-							<a href="/archives/2018">2018</a>
-						</span>
-						</h2>
-				
-				
-					
-					
-					<div class="archive archive-month" data-date="201810">
-						<h3 class="archive-title">
-							<a href="/archives/2018/10">10</a>
-						</h3>
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2018/10/14/逆转字符/">
-                        <h4 class="post-title">
-                            逆转字符
-                        </h4>
-                        
-                    </a>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h4 id="拉丁猪文字游戏"><a href="#拉丁猪文字游戏" class="headerlink" title="拉丁猪文字游戏"></a>拉丁猪文字游戏</h4><p>思路：<br>定义一个函数匹配模式<br>一：利用正则表达式 匹配出单词的第一个辅音音素字母x<br>二：字母找出来后直接用str 的单词,减去x  然后 + xay</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">x = input(<span class="string">'please enter your words:'</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">game_pigwords</span><span class="params">(x)</span>:</span></span><br><span class="line">    reg = <span class="string">r'[^aeiou]'</span></span><br><span class="line">    pattern = re.compile(reg)</span><br><span class="line">    f_word = re.sub(pattern,<span class="string">''</span>,x,count=<span class="number">1</span>)                     </span><br><span class="line">    <span class="comment">#用空值替代第一个辅音字母，获取去除一个字母的字符串</span></span><br><span class="line">    the_letter_objective = re.search(pattern,x)      </span><br><span class="line">    <span class="comment">#search()和match()返回的是一个对象。</span></span><br><span class="line">    single_word = the_letter_objective.group()       </span><br><span class="line">    <span class="comment">#调用对象的方法则是 Objective.group()</span></span><br><span class="line">    the_pig_word = f_word + single_word +<span class="string">'ay'</span></span><br><span class="line">    <span class="keyword">return</span> the_pig_word</span><br><span class="line">    <span class="comment">#return f_word,single_word,the_pig_word</span></span><br><span class="line">    <span class="comment">#print(fw)</span></span><br><span class="line">print(game_pigwords(x))</span><br></pre></td></tr></table></figure>
+<p> 用空值替代第一个辅音字母，获取去除一个字母的字符串，<br> count 为计数次数，即替换的次数。count=0 是默认的全部替换，即符合条件的元素全部换掉。等于1 则换一个，按照先后顺序替换，以此类推<br> 调用对象的方法则是 Objective.group()</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2018/10/14/统计元音字母/" data-toggle="tooltip" data-placement="top"
+                           title="统计元音字母">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2018/10/14/判断回文/" data-toggle="tooltip" data-placement="top"
+                           title="判断回文">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#拉丁猪文字游戏"><span class="toc-text">拉丁猪文字游戏</span></a></li></ol>
                 </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2018/10/14/统计元音字母/">
-                        <h4 class="post-title">
-                            统计元音字母
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2018/10/14/拉丁猪文字游戏/">
-                        <h4 class="post-title">
-                            拉丁猪文字游戏
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2018/10/14/判断回文/">
-                        <h4 class="post-title">
-                            判断回文
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2018/10/14/python-turtle工具画五星红旗/">
-                        <h4 class="post-title">
-                            python turtle工具画五星红旗
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-					
-					</div><!--month-->
-					
-					
-					<div class="archive archive-month" data-date="201806">
-						<h3 class="archive-title">
-							<a href="/archives/2018/06">06</a>
-						</h3>
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2018/06/07/hexo建立博客/">
-                        <h4 class="post-title">
-                            hexo建立博客
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
+            </div>
         </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
     </div>
+</article>
+
+
+
+
+
+
 
 <!-- Footer -->
 <!-- Footer -->

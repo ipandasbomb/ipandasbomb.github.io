@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        风起&#39;s blog
+        统计元音字母｜风起&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://ipandasbomb.github.io/archives/2018/06/">
+    <link rel="canonical" href="http://ipandasbomb.github.io/2018/10/14/统计元音字母/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -43,7 +43,7 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
 " data-ishome = "false" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -115,160 +115,126 @@
 </script>
 
 <!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="source\img\post-default.jpg">
+
+
 <style>
-    .intro-header .site-heading {
-        margin: 50px;
-    }
     
     header.intro-header {
         background-image: url('source\img\post-default.jpg')
     }
+
     
 </style>
 
-<!-- Page Header -->
 <header class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading text-center">
-                    <h1>archives</h1>
-                    <span class="subheading">可以根据归档日期检索所有文件</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>统计元音字母</h1>
+                    
+                    <span class="meta">
+                         作者 风起
+                        <span>
+                          日期 2018-10-14
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="post-title-haojen">
+        <span>
+            统计元音字母
+        </span>
+    </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- archive list -->
-            
-				
-				
-				
-					
-					
-					<div class="archive archive-year" data-date="2018">
-						<h2 class="archive-title">
-						<span class="fa fa-archive">
-							<a href="/archives/2018">2018</a>
-						</span>
-						</h2>
-				
-				
-					
-					
-					<div class="archive archive-month" data-date="201810">
-						<h3 class="archive-title">
-							<a href="/archives/2018/10">10</a>
-						</h3>
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2018/10/14/逆转字符/">
-                        <h4 class="post-title">
-                            逆转字符
-                        </h4>
-                        
-                    </a>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h4 id="统计元音字母"><a href="#统计元音字母" class="headerlink" title="统计元音字母"></a>统计元音字母</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">#统计单词元音字母数量</span></span><br><span class="line"><span class="string">word = input('please enter your word:')</span></span><br><span class="line"><span class="string">pattern = re.compile(r'[aeiou]')                                           #reg = r'[aeiou]'    pattern = re.compile(reg)</span></span><br><span class="line"><span class="string">the_letters = pattern.findall(word)</span></span><br><span class="line"><span class="string">print(len(the_letters))</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment">#分类统计元音字母数量</span></span><br><span class="line">word = input(<span class="string">'please enter your word:'</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">caculate</span><span class="params">(word)</span>:</span></span><br><span class="line">    pattern1 = re.compile(<span class="string">r'[aeiou]'</span>)</span><br><span class="line">    pattern2 = re.compile(<span class="string">r'[a]'</span>)</span><br><span class="line">    pattern3 = re.compile(<span class="string">r'[e]'</span>)</span><br><span class="line">    pattern4 = re.compile(<span class="string">r'[i]'</span>)</span><br><span class="line">    pattern5 = re.compile(<span class="string">r'[o]'</span>)</span><br><span class="line">    pattern6 = re.compile(<span class="string">r'[u]'</span>)</span><br><span class="line">    the_letters_all = pattern1.findall(word)</span><br><span class="line">    the_letters_a = pattern2.findall(word)</span><br><span class="line">    the_letters_e = pattern3.findall(word)</span><br><span class="line">    the_letters_i = pattern4.findall(word)</span><br><span class="line">    the_letters_o = pattern5.findall(word)</span><br><span class="line">    the_letters_u = pattern6.findall(word)</span><br><span class="line">    the_all = print(<span class="string">'元音字母总数：'</span>,len(the_letters_all))</span><br><span class="line">    the_a = print(<span class="string">'a:'</span>,len(the_letters_a))</span><br><span class="line">    the_e = print(<span class="string">'e:'</span>,len(the_letters_e))</span><br><span class="line">    the_i = print(<span class="string">'i:'</span>,len(the_letters_i))</span><br><span class="line">    the_o = print(<span class="string">'o:'</span>,len(the_letters_o))</span><br><span class="line">    the_u = print(<span class="string">'u:'</span>,len(the_letters_u))</span><br><span class="line">    <span class="comment">#return the_all,the_a,the_e,the_i,the_o,the_u</span></span><br><span class="line">print(caculate(word))</span><br></pre></td></tr></table></figure>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2018/10/14/逆转字符/" data-toggle="tooltip" data-placement="top"
+                           title="逆转字符">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2018/10/14/拉丁猪文字游戏/" data-toggle="tooltip" data-placement="top"
+                           title="拉丁猪文字游戏">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#统计元音字母"><span class="toc-text">统计元音字母</span></a></li></ol>
                 </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2018/10/14/统计元音字母/">
-                        <h4 class="post-title">
-                            统计元音字母
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2018/10/14/拉丁猪文字游戏/">
-                        <h4 class="post-title">
-                            拉丁猪文字游戏
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2018/10/14/判断回文/">
-                        <h4 class="post-title">
-                            判断回文
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2018/10/14/python-turtle工具画五星红旗/">
-                        <h4 class="post-title">
-                            python turtle工具画五星红旗
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-					
-					</div><!--month-->
-					
-					
-					<div class="archive archive-month" data-date="201806">
-						<h3 class="archive-title">
-							<a href="/archives/2018/06">06</a>
-						</h3>
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2018/06/07/hexo建立博客/">
-                        <h4 class="post-title">
-                            hexo建立博客
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
+            </div>
         </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
     </div>
+</article>
+
+
+
+
+
+
 
 <!-- Footer -->
 <!-- Footer -->

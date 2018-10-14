@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        hexo建立博客｜风起&#39;s blog
+        逆转字符｜风起&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://ipandasbomb.github.io/2018/06/07/hexo建立博客/">
+    <link rel="canonical" href="http://ipandasbomb.github.io/2018/10/14/逆转字符/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -120,13 +120,13 @@
 
 
 <img class="wechat-title-img"
-     src="nullimg/post-default.jpg">
+     src="source\img\post-default.jpg">
 
 
 <style>
     
     header.intro-header {
-        background-image: url('nullimg/post-default.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
+        background-image: url('source\img\post-default.jpg')
     }
 
     
@@ -137,12 +137,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>hexo建立博客</h1>
+                    <h1>逆转字符</h1>
                     
                     <span class="meta">
                          作者 风起
                         <span>
-                          日期 2018-06-07
+                          日期 2018-10-14
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -154,7 +154,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            hexo建立博客
+            逆转字符
         </span>
     </div>
 </header>
@@ -165,80 +165,20 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h2 id="简要思路："><a href="#简要思路：" class="headerlink" title="简要思路："></a>简要思路：</h2><p>安装软件建立好ssh后<br>只需在指定文件夹下打开git bash执行三个命令就可以了<br>分别是<br>hexo init   #建立项目，然后设置主题，在source目录放入域名<br>npm install hexo-deployer-git –save   # 导入部署<br>hexo g -d      #生成博客并部署到GitHub，需要ssh秘钥。完成。</p>
-<h2 id="①-建立项目"><a href="#①-建立项目" class="headerlink" title="-①- 建立项目"></a>-①- 建立项目</h2><p>  在GitHub上建立repositry 名字为your_username.github.io</p>
-<h2 id="②-安装软件"><a href="#②-安装软件" class="headerlink" title="-②- 安装软件"></a>-②- 安装软件</h2><pre><code>安装好 node.js  和 github for windows
-</code></pre><h3 id="配置ssh"><a href="#配置ssh" class="headerlink" title="配置ssh"></a>配置ssh</h3><pre><code>ssh的作用是建立本地和远程库之间连接的管理工具
+                <h3 id="逆转字符"><a href="#逆转字符" class="headerlink" title="逆转字符"></a>逆转字符</h3><h4 id="方法一-：使用切片"><a href="#方法一-：使用切片" class="headerlink" title="方法一 ：使用切片"></a>方法一 ：使用切片</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string"># s = 'asdfasdf'</span></span><br><span class="line"><span class="string"># s[::-1]  反向切片技术</span></span><br><span class="line"><span class="string">然后定义为一个函数</span></span><br><span class="line"><span class="string">def f(x):</span></span><br><span class="line"><span class="string">    return x[::-1]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">a = [1,2,3,4,5,6,7,8,9,0]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">print(f(a))</span></span><br><span class="line"><span class="string">print(f('nihaoya'))</span></span><br><span class="line"><span class="string">print(f('helloworld'))</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line">解读：切片技术中，方括号内有一个冒号 “：” 冒号左右两边的数字则分别是列表</span><br><span class="line">左右位置的索引，不管是一个数字还是两个数字还是没有数字，</span><br><span class="line">有数字则</span><br><span class="line">a[<span class="number">2</span>:]   返回    [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span>]</span><br><span class="line">a[:<span class="number">-1</span>]  返回　　 [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line">没有数字的情况</span><br><span class="line">a[:]    返回　　 [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">有两个冒号的情况下，有所不同，右边的数表示间隔。</span><br><span class="line">当左边的数字为正值，则右边的数字表示间隔，间隔距离为右边数字的</span><br><span class="line">绝对值。当右边的数字为正值，则顺向间隔列出列表，如下</span><br><span class="line">a[<span class="number">2</span>::<span class="number">2</span>]　　[<span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]</span><br><span class="line">当为正值且右边没有数字（表示间隔为零），则表示从左边标记的索引位置</span><br><span class="line">列出所有的元素，如</span><br><span class="line"> a[<span class="number">2</span>::]　　[<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span>]</span><br><span class="line">当右边的数字为负数，则表示反向间隔列出列表</span><br><span class="line"> a[<span class="number">6</span>::<span class="number">-2</span>]　　[<span class="number">7</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">当左边数字为负数，那么右边的数仍是表示间隔。</span><br></pre></td></tr></table></figure>
+<h4 id="方法二-reduce-函数"><a href="#方法二-reduce-函数" class="headerlink" title="方法二  reduce()函数"></a>方法二  reduce()函数</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">from functools import reduce</span></span><br><span class="line"><span class="string">#reduce(lambda x,y :y+x,'nihaooya')</span></span><br><span class="line"><span class="string">#a = reduce(lambda x,y :y+x,'nihaooya')</span></span><br><span class="line"><span class="string">#print(a)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#将reduce()函数定义为一个函数</span></span><br><span class="line"><span class="string">def f(s):</span></span><br><span class="line"><span class="string">    return reduce(lambda x,y:y+x,s)    #函数定义，定义数据操作的一种行为或者规则。</span></span><br><span class="line"><span class="string">a ='nihaoya'</span></span><br><span class="line"><span class="string">print(f(a))</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h4 id="方法三-使用reverse-函数"><a href="#方法三-使用reverse-函数" class="headerlink" title="方法三  使用reverse() 函数"></a>方法三  使用reverse() 函数</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">def f(x):</span></span><br><span class="line"><span class="string">    l = list(x)</span></span><br><span class="line"><span class="string">    l.reverse()</span></span><br><span class="line"><span class="string">    return (''.join(l))</span></span><br><span class="line"><span class="string">a = 'nihao'</span></span><br><span class="line"><span class="string">print(f(a))</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 
-具体配置参考如下链接：
-</code></pre><p><a href="http://www.cnblogs.com/ayseeing/p/3572582.html" target="_blank" rel="noopener">github设置添加SSH - 破男孩 - 博客园</a></p>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><pre><code>npm install hexo-cli -g 安装hexo
-具体参考以下链接
-</code></pre><p>  <a href="https://segmentfault.com/a/1190000000473869" target="_blank" rel="noopener">nrm —— 快速切换 NPM 源 （附带测速功能） - SegmentFault 业界资讯 - SegmentFault 思否</a></p>
-<p>  <a href="https://www.jianshu.com/p/017e01718d41" target="_blank" rel="noopener">记录第一次搭建hexo</a></p>
-<h2 id="③-建立本地博客"><a href="#③-建立本地博客" class="headerlink" title="-③- 建立本地博客"></a>-③- 建立本地博客</h2><pre><code>具体内容参考如下链接：
-基于Hexo搭建博客并部署到Github Pages
-配置好软件环境后，选择自己的博客文件路径，执行以下hexo命令，
-如下：
-  hexo init             初始化，安装所需包，建立软件库
-  npm install           可选操作
-  hexo g（generate）     生成
-  hexo s（server）       运行
-  此时可到localhost：4000 本地预览搭建的博客
-
-  其他相关命令如下：
-  hexo n 新建文章，在\source\_posts 文件夹操作
-  hexo new page 新建页面，比如在导航栏里新增一个“关于我”的页面
-  hexo clean  清除本地生成的public文件夹和数据库
-  hexo g 生成博客文件
-  hexo s 运行本地浏览器，预览搭建好的博客
-  hexo d 部署博客到GitHub上
-</code></pre><h2 id="④-本地配置—–部署到GitHub"><a href="#④-本地配置—–部署到GitHub" class="headerlink" title="-④- 本地配置—–部署到GitHub"></a>-④- 本地配置—–部署到GitHub</h2><pre><code>上步建立了本地博客后，对\blog\hexo 目录的_config.yml文件进行配置
-1 首先到GitHub上复制repository 的ssh地址
-2 然后到_config.yml上修改。
-3 根目录下，执行git命令
-  npm install hexo-deployer-git --save
-  hexo g
-  hexo d
-如果没有以上命令，会出现deployer not found 的错误，出现deployer done ：git 说明部署到GitHub成功。失败了可参考如下步骤：
-删除  .deploy_git文件夹
-       hexo clean
-       hexo g
-       hexo d
-Ø 其他
-</code></pre><h2 id="⑤-绑定域名"><a href="#⑤-绑定域名" class="headerlink" title="-⑤- 绑定域名"></a>-⑤- 绑定域名</h2><pre><code>在\source 文件夹下建立CNAME文件，输入你的域名：xxx.com。无格式保存。然后打开git bash执行命令:
-hexo g -d
-
-推送到GitHub。此时会需要ssh的秘钥。
-执行后，等待，刷新网站，即可。然后到GitHub项目进行设置，在GitHub pages设置中将域名添加到custom domain中。
-</code></pre><h2 id="⑥-域名解析"><a href="#⑥-域名解析" class="headerlink" title="-⑥- 域名解析"></a>-⑥- 域名解析</h2><pre><code>需要将自己的域名进行解析，这里使用阿里云DNS服务器进行解析。首先命令提示符输入命令 ping GitHub项目名.github.io获得域名ip，然后解析。同时由于我这里是购买的godaddy的域名，使用阿里云解析，那么需要到godaddy修改DNS服务器，修改为阿里云的DNS服务器。具体DNS部分可以参考
-</code></pre><p>  <a href="https://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="noopener">如何搭建一个独立博客——简明Github Pages与Hexo教程 - 简书</a></p>
-<h2 id="⑦-主题"><a href="#⑦-主题" class="headerlink" title="-⑦- 主题"></a>-⑦- 主题</h2><pre><code>在\themes 目录下（打开git bash），执行命令：
-git clone xxxxxx（此处为你中意的hexo主题地址）
-然后到根目录config文件的theme：xxx（此处填入你拷贝的主题名字）
--⑧- 问题
-► 域名问题，我的是中文域名，需要转码后，才能被GitHub识别，转码网站如下：
-</code></pre><p>  <a href="http://www.webmasterhome.cn/tool/punycode.asp" target="_blank" rel="noopener">中文域名在线转码</a><br>►</p>
-<h2 id="⑨-异地管理博客"><a href="#⑨-异地管理博客" class="headerlink" title="-⑨- 异地管理博客"></a>-⑨- 异地管理博客</h2><pre><code>► 分支配置
-• 可在以上建立的博客的基础上，本地博客不做处理，然后新建一个名为hexo的分支（新建的hexo会有master分支的文档，处理见下），并设置为默认分支 default branch。
-• 也可以在建立博客的时候直接建立两个分支，一个为master（存放静态文档），一个为hexo（存放配置文档）
-然后在进行配置config.yml 的时候，将branch设置为master。
-► 同步：
-打开GitHub for Windows clone博客到本地，然后打开博客目录，这时候是在hexo环境，可以打开git bash 查看是hexo环境，保留.git文件夹，其他所有文件删除，复制原先建立的本地博客文件到hexo目录下，然后同步到GitHub上即可。如果换电脑了，直接打开git bash clone博客到本地，然后，执行命令npm install（不然无法形成网页文件），即可开始写博客了。这个方案源码都是公开的。如果注重隐私可采取下方案。
-
-
-► 或者直接云盘备份本地博客。
-</code></pre>
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/10/14/python-turtle工具画五星红旗/" data-toggle="tooltip" data-placement="top"
-                           title="python turtle工具画五星红旗">&larr; Previous Post</a>
-                    </li>
                     
+                    <li class="next">
+                        <a href="/2018/10/14/统计元音字母/" data-toggle="tooltip" data-placement="top"
+                           title="统计元音字母">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
@@ -253,7 +193,7 @@ git clone xxxxxx（此处为你中意的hexo主题地址）
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简要思路："><span class="toc-text">简要思路：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#①-建立项目"><span class="toc-text">-①- 建立项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#②-安装软件"><span class="toc-text">-②- 安装软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置ssh"><span class="toc-text">配置ssh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装hexo"><span class="toc-text">安装hexo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#③-建立本地博客"><span class="toc-text">-③- 建立本地博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#④-本地配置—–部署到GitHub"><span class="toc-text">-④- 本地配置—–部署到GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#⑤-绑定域名"><span class="toc-text">-⑤- 绑定域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#⑥-域名解析"><span class="toc-text">-⑥- 域名解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#⑦-主题"><span class="toc-text">-⑦- 主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#⑨-异地管理博客"><span class="toc-text">-⑨- 异地管理博客</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#逆转字符"><span class="toc-text">逆转字符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法一-：使用切片"><span class="toc-text">方法一 ：使用切片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法二-reduce-函数"><span class="toc-text">方法二  reduce()函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法三-使用reverse-函数"><span class="toc-text">方法三  使用reverse() 函数</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
